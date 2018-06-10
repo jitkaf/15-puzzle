@@ -1,0 +1,78 @@
+
+to ze zadani
+if ((koren->ohodnoceni-koren->patro < zakladatel->ohodnoceni+15))   - 742s
+
+if ((koren->ohodnoceni-koren->patro < zakladatel->ohodnoceni+10)    - 498 s
+
+if ((koren->ohodnoceni-koren->patro < zakladatel->ohodnoceni+5)   - nedobìhlo do 15 minut
+
+if ((koren->ohodnoceni < zakladatel->ohodnoceni+20      - 15 minut a nic
+
+if ((koren->ohodnoceni < 2*zakladatel->ohodnoceni)&&(shoda==0	)   - 287s
+
+if ((koren->ohodnoceni < 1.5*zakladatel->ohodnoceni)&&(shoda==0	) - 275s
+
+if ((koren->ohodnoceni < 1,5*zakladatel->ohodnoceni)&&(koren->ohodnoceni-koren->patro<zakladatel->ohodnoceni+10)&
+							- 220sekund
+
+					- to same ale s kontrolou duplicit 540s
+					- bey koontroli duplicit s podm9nkou max 100 ve fronte - 220s	
+			
+	
+if (((koren->ohodnoceni < zakladatel->ohodnoceni+5)&&(koren->ohodnoceni-koren->patro<zakladatel->ohodnoceni+5))||(pocet<20)){
+					- s kontrolou duplicit - nedobehlo
+
+if ((((koren->ohodnoceni < 1,5*zakladatel->ohodnoceni)&&(koren->ohodnoceni-koren->patro<zakladatel->ohodnoceni+10))&&(pocet<50))||
+(((koren->ohodnoceni < 1,5*zakladatel->ohodnoceni)&&(koren->ohodnoceni-koren->patro<zakladatel->ohodnoceni+2))&&(pocet<70))||(pocet<30)){
+				- bez kotrolu duplicit -nedobehlo
+
+if ((koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty+10||(pocet<10)){
+			-bez kontrolz duplicit - 469s		
+
+
+if ((koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+1+50/(pocet+3))){
+			-bez kontroly duplicit 312s , 334
+if ((koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+1+30/(pocet+3))){
+			-bez kontroly duplicit 329s
+if ((koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+1+100/(pocet+3))){
+			-bez kontroly duplicit 320s
+if ((koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+1+10/(pocet+3))){
+			-bez kontroly duplicit 342s
+
+
+if ((koren->ohodnoceni < 1,5*zakladatel->vrchol_fronty->ohodnoceni)&&(koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+10)){
+			-bez kontroly duplicit 325s
+if ((koren->ohodnoceni < 3*zakladatel->vrchol_fronty->ohodnoceni)&&(koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni+30)){
+			-bez kontrolz duplicit 336s
+if(koren->ohodnoceni-koren->patro<zakladatel->vrchol_fronty->ohodnoceni-zakladatel->vrchol_fronty->patro+10){
+			-bez kontrolz 1304s
+
+
+
+if((zakladatel==NULL)||(zakladatel->vrchol_fronty==NULL)||(zakladatel->vrchol_fronty->dvacaty==NULL)||(koren->ohodnoceni < zakladatel->vrchol_fronty->dvacaty->ohodnoceni)){
+		bez opakovani    512s,   uzlu  115044
+   to same ale porovnavam se stu uzlem     222s , uzlu 115044, s kontrolou duplicit 540s
+   to same ale porovnavam s padedesatym uzlem	243s 115044, s kontrolou 594s
+			  s osmdesatým uzlem: 214s   115044uzlu
+			  s šedesatym 204s	
+			  s tøicatym  210s
+			  s dvacatym 206s    furt 115044uzlu	
+			  s desatym, šestym 2018s furt 115044
+			  s ètvrtym  
+
+
+lépe     s desatym 160s a 99594uzlu	
+
+
+
+
+***s 30 000 frontou je to s a  uzlu
+***s 1000   frontou je to  s  a uzlu   
+***s 100 frontou je to a  s  uzlu 	
+***s 40 frontou je to    a   uzlu
+
+
++4 a frontou 254   - 7 sekund a 11583 uzlu
+
+
+	

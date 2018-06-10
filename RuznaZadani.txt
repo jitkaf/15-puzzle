@@ -1,0 +1,98 @@
+z odevzdani:
+1 7 4 8; 9 3 15 2; 13 5 11 12; 10 6 14 _
+1 7 4 8 9 3 15 2 13 5 11 12 10 6 14 0
+
+
+
+
+
+
+
+resitelne: 
+\"12 7 11 15; 10 1 6 4; 13 8 2 5; 9 14 3 _\" - (0.25 - 102 - 3s), (0.3 - 84 - 15s), (0.35 - 80 - 1s)
+12 7 11 15 10 1 6 4 13 8 2 5 9 14 3 0
+	-mì uzlu 41166 a 34s
+	
+
+\"7 2 6 5; 1 3 4 8; 10 11 9 12; 13 14 15 0\" - (0.25 - 58 - 1s), (0.3 - 44 - 1.4s), (0.35 - 44 - 0.4s) ... pole 0.35 spadne
+7 2 6 5 1 3 4 8 10 11 9 12 13 14 15 0      -44kroku a 90003uzlu a 7,3sekund
+
+\"15 14 11 4; 6 8 9 _; 5 1 13 3; 10 12 7 2\" - uz jo pres pole
+					-348s 102 pater a 375674uzlu	
+
+\"_ 13 3 7; 11 5 10 12; 9 4 2 14; 15 1 8 6\" - taky uz de 
+\"3 _ 11 4; 1 9 2 7; 13 5 6 8; 14 15 10 12\" - (0.25 - 35 - 2s), (0.35 - 41 - 0.7s)
+-37 pater 3 vteøiny
+\"13 12 1 5; 3 10 7 _; 2 6 4 9; 15 8 14 11\" - (0.25 - 100 - 38s), (0.3 - 92 - 5s), (0.35 - 88 - 35s)
+-patro 88 a 109s a 150230uzlu
+\"9 2 3 11; _ 13 8 10; 7 14 12 4; 6 5 1 15\" - (0.15 - 121 - 23s), (0.2 - 87 - 4s), (0.3 - 71 - 73s)
+
+\"11 9 6 7; 1 14 8 12; 15 2 10 13; _ 4 3 5\"
+\"6 12 14 10; _ 11 4 7; 1 15 2 5; 13 8 3 9\"
+\"3 2 1; 4 5 6; 0 8 7\"
+
+jednoduchy:
+\"1 2 4 8; 5 7 3 _; 9 6 10 12; 13 14 11 15\" - 8 kroku - nelze poleA 0.35        20 kroku a 26 krokù
+	1 2 4 8 5 7 3 0 9 6 10 12 13 14 11 15 - 8 kroku 25 uzlu
+
+\"6 5 2 3; 1 10 8 4; 13 _ 7 12; 14 9 11 15\" - 17 kroku 462 uzlu, pri polovicnim patru  je 44 kroku a 23767 uzlu
+ 6 5 2 3 1 10 8 4 13 0 7 12 14 9 11 15     ted 17 kroku a 201 uzlu 0,5s
+
+
+
+
+
+30kroku: 9 3 8 6 13 0 1 4 5 2 11 12 14 10 15 7
+\"1 3 6 4; _ 5 7 8; 14 2 10 12; 9 13 11 15\" - 15 kroku na 92 uzlu
+1 3 6 4 0 5 7 8 14 2 10 12 9 13 11 15   
+
+
+\"1 3 6 4; 2 7 11 8; 5 14 _ 12; 9 10 13 15\" - 22 kroku ?(pres19 urcite)
+1 3 6 4 2 7 11 8 5 14 0 12 9 10 13 15 - 20 kroku 1750 uzlu, pri vzdalenosti funkcu 25 a 3966 kroku
+
+1 3 6 4 2 7 11 8 5 14 13 12 9 10 0 15 - 21 kroku 2709 uzlu , uz 23 kroku a 2412 uzlu
+
+1 3 6 4 2 7 11 8 5 14 13 12 9 0 10 15 - 22 kroku 1488 uzlu , uz 1353
+				      -už 24 kroku a 768 uzlu a 1 sekunda		
+
+
+
+neresitelne: 
+\"1 2 3 4; 5 6 7 8; 9 10 11 12; 13 15 14 0\"
+
+spatne zadane:
+\"8 5 11 4; 2 15 7 9; 13 _ 3 6; 12 14 15 10\"
+\"3 _ 11 4; 1 9 2 10; 13 5 6 8; 14 15 10 12\"
+
+
+resitelnost
+
+Pokud je matice licha a pocet inverzi je sudy pak de resit
+
+Pokud je matice suda a prazdny misto je v sudy radce(pocitano odspoda) a pocet inverzi je lichy pak lze resit
+
+Pokud je matice suda a prazdny misto je v lichy radce(odspoda) a pocet inverzi je sudy, pak je resitelny
+
+
+A pocet inverzi je dyz si napises matici po radkach za sebe(zacnes prvnim radkem) tak dycky pro kazdy cislo, kolik jich je mensich za nim a soucrt pro vsechny cisla
+
+
+Dyz bude na vlevo nahore(v radku teda na prvnim miste) treba 12, tak prictes 11 inverzi(1-11) musi bejt nekde dal
+Dyz bude dalsi 8, tak prictes 7, protoze 1-7 musi bejt dal
+Dalsi treba 10, tak prictes jen 8, jelikoz 7 uz byla driv
+
+licha inverze liche - nejde 
+
+
+suda, inverze liche a prazdne misto v liche radce -nejde
+suda, inverze sude a prazdne misto v sude radce - nejde
+
+
+
+
+
+
+
+If the grid width is odd, then the number of inversions in a solvable situation is even. 
+If the grid width is even, and the blank is on an even row counting from the bottom (second-last, fourth-last etc), then the number of inversions in a solvable situation is odd. 
+If the grid width is even, and the blank is on an odd row counting from the bottom (last, third-last, fifth-last etc) then the number of inversions in a solvable situation is even.
